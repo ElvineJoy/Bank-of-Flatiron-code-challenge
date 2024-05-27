@@ -1,21 +1,11 @@
 import React,{useState, useEffect} from "react";
 import Transaction from "./Transaction";
 
-function TransactionsList({searchCategory}) {
-
-  const[transactions ,setTransactions] = useState([]);
-  const [filteredResults, setFilteredResults] = useState([]);
+function TransactionsList({transactions, searchCategory}) {
+  const [filteredResults, setFilteredResults] = useState(transactions);
   
-  // getting the data from the db.json file, using fetch
-  useEffect(() => {
-    fetch("http://localhost:8001/transactions")
-      .then(response => response.json())
-      .then(data => {
-        setTransactions(data);
-        setFilteredResults(data);
-      });
-  }, []);
-
+  
+// filtering conditions
   useEffect(() => {
     if(searchCategory) {
       const filteredTrans = transactions.filter(transaction => transaction.category.toLowerCase().includes(searchCategory.toLowerCase())

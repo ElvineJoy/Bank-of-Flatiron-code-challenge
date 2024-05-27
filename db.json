@@ -83,6 +83,27 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "id": 13,
+      "date": "2020-05-19",
+      "description": "My birthday giftcard from work",
+      "category":"Gift",
+      "amount":"100"
+    },
+    {
+      "date": "2024-05-27",
+      "description": "Bowling",
+      "category": "Entertainment",
+      "amount": "-15.00",
+      "id": 14
+    },
+    {
+      "date": "2024-03-01",
+      "description": "School Fees: University",
+      "category": "Education",
+      "amount": "-200",
+      "id": 15
     }
   ]
 }
